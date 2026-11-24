@@ -106,11 +106,7 @@ while url:
         url = urljoin(url, next_page["href"])
     else:
         url = None
-
-# Convert data into DataFrame
 df = pd.DataFrame(books_data)
-
-# Save dataset
 df.to_csv("books_dataset.csv", index=False)
 
 print("\nFirst 5 records:")
